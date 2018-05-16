@@ -15,6 +15,10 @@
                 <a class="nav-link" href="/">Site Home</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="#">Just For Today</a>
+            </li>
+
         </ul>
         
         <ul class="navbar-nav">

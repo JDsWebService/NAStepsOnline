@@ -66,3 +66,5 @@ Route::prefix('admin')->group(function() {
 	// Admin Dashboard Page
 	Route::get('/', 'AdminController@index')->name('admin.dashboard');
 });
+
+Route::resource('jft', 'JustForTodayController');
