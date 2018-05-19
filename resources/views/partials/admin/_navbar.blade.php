@@ -15,28 +15,27 @@
                 <a class="nav-link" href="/">Site Home</a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">Just For Today</a>
-            </li>
-
         </ul>
         
         <ul class="navbar-nav">
             <!-- Authentication Links -->
-            @guest('admin')
-                <li><a class="nav-link" href="{{ route('admin.login') }}">{{ __('Login') }}</a></li>
-            @else
+            @auth('admin')
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->first_name }} <span class="caret"></span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item {{ Request::is('admin') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">
+                        <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
                             Dashboard
                         </a>
-                        <a class="dropdown-item" href="#}">Categories</a>
-                        <a class="dropdown-item" href="#}">Tags</a>
+                        
+                        <a class="dropdown-item" href="{{ route('jft.index') }}">
+                            Just For Today
+                        </a>
+                        <a class="dropdown-item" href="{{ route('news.admin.index') }}">
+                            News
+                        </a>
 
                         <div class="dropdown-divider"></div>
                         
@@ -51,7 +50,7 @@
                         </form>
                     </div>
                 </li>
-            @endguest
+            @endauth
         </ul>
     </div>
 </nav>
