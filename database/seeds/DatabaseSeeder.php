@@ -12,5 +12,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+
+        // Use the News Factory to Generate some dummy Posts
+        factory(App\News::class, 50)->create();
     }
 }

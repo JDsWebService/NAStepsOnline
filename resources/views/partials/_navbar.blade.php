@@ -16,11 +16,11 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="{{ route('jft.show') }}">Just For Today</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="{{ route('news.index') }}">News</a>
             </li>
 
             <li class="nav-item">
