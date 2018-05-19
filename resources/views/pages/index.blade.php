@@ -62,8 +62,8 @@
 
 	<div class="row">
 		<div class="col-sm-6 offset-sm-3">
-			<a href="{{ route('register') }}">
-				<button class="btn btn-success btn-block">Sign Up FREE Today!</button>
+			<a href="{{ route('register') }}" class="btn btn-success btn-block">
+				Sign Up FREE Today!
 			</a>
 		</div>
 	</div>

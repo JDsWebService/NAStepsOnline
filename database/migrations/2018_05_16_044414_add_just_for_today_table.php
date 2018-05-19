@@ -16,10 +16,11 @@ class AddJustForTodayTable extends Migration
         Schema::create('just_for_today', function (Blueprint $table) {
             // Create the Just For Today Table
             $table->increments('id');
-            $table->date('date');
+            $table->string('title');
+            $table->integer('jft_page')->unsigned()->unique();
+            $table->date('date')->unique();
             $table->text('bt_quote');
-            $table->integer('bt_page');
-            $table->integer('jft_page');
+            $table->integer('bt_page')->unsigned();
             $table->text('body');
             $table->text('jft_end');
             $table->timestamps();

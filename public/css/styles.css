@@ -7,3 +7,8 @@
 .top-spacing {
 	margin-top: 10px;
 }
+
+/* Pagination */
+.pagination {
+   justify-content: center;
+}

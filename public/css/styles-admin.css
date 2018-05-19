@@ -3,7 +3,17 @@
 	padding: 8px 16px;
 }
 
+/* Top Spacing */
+.top-spacing {
+	margin-top: 15px;
+}
+
 /* Horizontal Rule */
 hr {
 	background-color: #aaa;
+}
+
+/* Pagination */
+.pagination {
+   justify-content: center;
 }
