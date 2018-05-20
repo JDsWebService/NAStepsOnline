@@ -14,6 +14,9 @@
 		branding: false,
 		resize: false,
 		statusbar: false,
+		force_br_newlines : false,
+		force_p_newlines : false,
+		forced_root_block : '',
 		toolbar: 	['undo redo | cut copy paste | removeformat',
 					'bold italic underline | link | outdent indent | alignleft aligncenter alignright alignjustify alignnone',],
 	});

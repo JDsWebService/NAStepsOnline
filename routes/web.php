@@ -111,13 +111,39 @@ Route::prefix('news')->group(function() {
 	// Admin Index
 	Route::get('/admin-index', 'NewsController@adminIndex')->name('news.admin.index');
 
-	// Store (Admin)
-	Route::post('/', 'NewsController@store')->name('news.store');
-
 	// Show (Public)
 	Route::get('/{slug}', 'NewsController@show')->name('news.show');
 
+	// Store (Admin)
+	Route::post('/', 'NewsController@store')->name('news.store');
+
 	// Index (Public)
 	Route::get('/', 'NewsController@publicIndex')->name('news.index');
+
+});
+
+// Steps Routes
+Route::prefix('steps')->group(function () {
+
+	// Steps Dashboard
+	Route::get('/dashboard', 'StepsController@stepsDashboard')->name('steps.dashboard');
+
+	// Create Page
+	Route::get('/create', 'StepsController@create')->name('steps.create');
+
+	// Edit (Admin)
+	Route::get('/{id}/edit', 'StepsController@edit')->name('steps.edit');
+
+	// Destroy
+	Route::delete('/{id}', 'StepsController@destroy')->name('steps.destroy');
+
+	// Update (Admin)
+	Route::put('/{id}', 'StepsController@update')->name('steps.update');
+
+	// Store
+	Route::post('/', 'StepsController@store')->name('steps.store');
+
+	// Index
+	Route::get('/', 'StepsController@index')->name('steps.index');
 
 });

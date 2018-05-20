@@ -3,9 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\JustForToday;
 
-class JFTFormRequest extends FormRequest
+class StepsFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,9 +22,9 @@ class JFTFormRequest extends FormRequest
      * @return array
      */
     public function rules()
-    {   
+    {
         // Grab the jft id from the route
-        $jft_id = $this->route('id');
+        $step_id = $this->route('id');
 
         // Switch on the method
         switch($this->method()) {
@@ -37,14 +36,8 @@ class JFTFormRequest extends FormRequest
             case 'POST':
             {
                 return [
-                    'title' => 'required|max:255',
-                    'jft_page' => 'required|integer|unique:just_for_today,jft_page',
-                    'month' => 'required',
-                    'day' => 'required',
-                    'bt_quote' => 'required',
-                    'bt_page' => 'required|integer',
-                    'body' => 'required',
-                    'jft_end' => 'required',
+                    'number' => 'required|unique:steps|integer',
+                    'description' => 'required'
                 ];
             }
             case 'PUT':
@@ -52,19 +45,12 @@ class JFTFormRequest extends FormRequest
             {   
                 
                 return [
-                    'title' => 'required|max:255',
-                    'jft_page' => 'required|integer|unique:just_for_today,jft_page,'. $jft_id,
-                    'month' => 'required',
-                    'day' => 'required',
-                    'bt_quote' => 'required',
-                    'bt_page' => 'required|integer',
-                    'body' => 'required',
-                    'jft_end' => 'required',
+                    'number' => 'required|integer|unique:steps,number,'. $step_id,
+                    'description' => 'required'
                 ];
             }
             default:break;
         }
-        
     }
 
     /**
@@ -75,8 +61,8 @@ class JFTFormRequest extends FormRequest
     public function messages()
     {
         return [
-            'title.required' => 'A title is required',
-            'body.required'  => 'A message is required',
+            'number.unique' => 'The Step has already been created. Use the edit page instead.',
+            'description.required'  => 'A description is required',
         ];
     }
 }
