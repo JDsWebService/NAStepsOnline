@@ -31,13 +31,17 @@
 							<td>{{ $article->id }}</td>
 							<td>{{ $article->title }}</td>
 							<td>
-								{{ substr(strip_tags($article->body), 0, 50) }}
-								{{ strlen(strip_tags($article->body)) > 50 ? "..." : "" }}
+								{{ substr(strip_tags(str_replace("&nbsp;", ' ', $article->body)), 0, 50) }}
+								{{ strlen(strip_tags(str_replace("&nbsp;", ' ', $article->body))) > 50 ? "..." : "" }}
 							</td>
 							<td>{{ date('M j, Y @ H:i', strtotime($article->created_at)) }}</td>
 							<td>
-								<a href="{{ route('news.show', $article->id) }}" class="btn btn-default btn-sm">View</a>
-								<a href="{{ route('news.edit', $article->id) }}" class="btn btn-primary btn-sm">Edit</a>
+								{!! Form::open(['route' => ['news.destroy', $article->id], 'method' => 'DELETE']) !!}
+									<a href="{{ route('news.edit', $article->id) }}" class="btn btn-info btn-sm">Edit</a>
+
+									{!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+
+								{!! Form::close() !!}
 							</td>
 						</tr>
 					@endforeach

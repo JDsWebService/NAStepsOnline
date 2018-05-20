@@ -9,6 +9,8 @@
 			
 			<h3>Create News Article</h3>
 
+			<hr>
+
 			<form action="{{ route('news.store') }}" method="post">
 				@csrf
 

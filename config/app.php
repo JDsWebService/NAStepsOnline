@@ -152,6 +152,7 @@ return [
          */
         Intervention\Image\ImageServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Mews\Purifier\PurifierServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -216,6 +217,8 @@ return [
         // Laravel COllective Form and HTML
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        // HTML Purifier
+        'Purifier' => Mews\Purifier\Facades\Purifier::class,
     ],
 
 ];

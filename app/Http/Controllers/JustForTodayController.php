@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Session;
+use Purifier;
 use App\JustForToday;
 // Request Validation
 use App\Http\Requests\JFTFormRequest;
@@ -59,12 +60,12 @@ class JustForTodayController extends Controller
         $jft = new JustForToday;
 
         // Place request into JFT Object
-        $jft->title = $request->title;
-        $jft->jft_page = $request->jft_page;
-        $jft->bt_quote = $request->bt_quote;
-        $jft->bt_page = $request->bt_page;
-        $jft->body = $request->body;
-        $jft->jft_end = $request->jft_end;
+        $jft->title = Purifier::clean($request->title);
+        $jft->jft_page = Purifier::clean($request->jft_page);
+        $jft->bt_quote = Purifier::clean($request->bt_quote);
+        $jft->bt_page = Purifier::clean($request->bt_page);
+        $jft->body = Purifier::clean($request->body);
+        $jft->jft_end = Purifier::clean($request->jft_end);
 
         // Figure out the date
         $month = $request->month;
@@ -136,12 +137,12 @@ class JustForTodayController extends Controller
         $jft = JustForToday::find($id);
 
         // Update the Object from the request
-        $jft->title = $request->title;
-        $jft->jft_page = $request->jft_page;
-        $jft->bt_quote = $request->bt_quote;
-        $jft->bt_page = $request->bt_page;
-        $jft->body = $request->body;
-        $jft->jft_end = $request->jft_end;
+        $jft->title = Purifier::clean($request->title);
+        $jft->jft_page = Purifier::clean($request->jft_page);
+        $jft->bt_quote = Purifier::clean($request->bt_quote);
+        $jft->bt_page = Purifier::clean($request->bt_page);
+        $jft->body = Purifier::clean($request->body);
+        $jft->jft_end = Purifier::clean($request->jft_end);
 
         // Figure out the date
         $month = $request->month;

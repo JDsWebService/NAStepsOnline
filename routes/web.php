@@ -80,43 +80,44 @@ Route::prefix('jft')->group(function() {
 	Route::post('/', 'JustForTodayController@store')->name('jft.store');
 
 	// Edit (Admin)
-	Route::get('/{jft}/edit', 'JustForTodayController@edit')->name('jft.edit');
+	Route::get('/{id}/edit', 'JustForTodayController@edit')->name('jft.edit');
 
 	// Update (Admin)
-	Route::put('/{jft}', 'JustForTodayController@update')->name('jft.update');
+	Route::put('/{id}', 'JustForTodayController@update')->name('jft.update');
 
 	// Destroy (Admin)
-	Route::delete('/{jft}', 'JustForTodayController@destroy')->name('jft.destroy');
+	Route::delete('/{id}', 'JustForTodayController@destroy')->name('jft.destroy');
 
 	// Index (Admin)
 	Route::get('/', 'JustForTodayController@index')->name('jft.index');
 
 });
 
+// News Routes
 Route::prefix('news')->group(function() {
-
-	// Show (Public)
-	Route::get('/{news}/show', 'NewsController@show')->name('news.show');
 
 	// Create (Admin)
 	Route::get('/create', 'NewsController@create')->name('news.create');
 
-	// Store (Admin)
-	Route::post('/', 'NewsController@store')->name('news.store');
-
 	// Edit (Admin)
-	Route::get('/{news}/edit', 'NewsController@edit')->name('news.edit');
+	Route::get('/{id}/edit', 'NewsController@edit')->name('news.edit');
 
 	// Update (Admin)
-	Route::put('/{news}', 'NewsController@update')->name('news.update');
+	Route::put('/{id}', 'NewsController@update')->name('news.update');
 
 	// Destroy (Admin)
-	Route::delete('/{news}', 'NewsController@destroy')->name('news.destroy');
+	Route::delete('/{id}', 'NewsController@destroy')->name('news.destroy');
 
 	// Admin Index
 	Route::get('/admin-index', 'NewsController@adminIndex')->name('news.admin.index');
 
+	// Store (Admin)
+	Route::post('/', 'NewsController@store')->name('news.store');
+
+	// Show (Public)
+	Route::get('/{slug}', 'NewsController@show')->name('news.show');
+
 	// Index (Public)
-	Route::get('/', 'NewsController@index')->name('news.index');
+	Route::get('/', 'NewsController@publicIndex')->name('news.index');
 
 });

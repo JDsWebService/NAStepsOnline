@@ -10,7 +10,7 @@
 		</div>
 
 		<div class="col-sm-2">
-			<a href="{{ route('jft.create') }}" class="btn btn-success btn-block">Create JFT</a>
+			<a href="{{ route('jft.create') }}" class="btn btn-success btn-block">Create Reading</a>
 		</div>
 	</div>
 
