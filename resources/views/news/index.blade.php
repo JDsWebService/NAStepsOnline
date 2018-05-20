@@ -16,7 +16,7 @@
 					{{ substr(strip_tags(str_replace("&nbsp;", ' ', $article->body)), 0, 300) }}
 					{{ strlen(strip_tags(str_replace("&nbsp;", ' ', $article->body))) > 300 ? "..." : "" }}
 				</p>
-				<a href="{{ route('news.show', $article->slug) }}" class="btn btn-info btn-sm">Read More</a>
+				<a href="{{ route('news.show', $article->slug) }}" class="btn btn-primary btn-sm">Read More ></a>
 				@if(!$loop->last)
 					<hr>
 				@endif
@@ -32,7 +32,7 @@
 		</div>
 
 		<div class="col-sm-4 text-right">
-			<h5>Popular Articles</h5>
+			<h2><small>Popular Articles</small></h2>
 			<hr>
 			@foreach($popular as $article)
 				<a href="{{ route('news.show', $article->slug) }}">{{ $article->title }}</a>
