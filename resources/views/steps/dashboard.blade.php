@@ -47,7 +47,7 @@
 		</div>
 
 		<div class="col-sm-3">
-			<a href="#">
+			<a href="{{ route('question.index') }}">
 	    		<div class="card text-center">
 					<img class="card-img-top" src="/images/admin/question.png" alt="Edit Step Questions">
 					<div class="card-body">

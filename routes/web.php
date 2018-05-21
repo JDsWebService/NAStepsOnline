@@ -147,3 +147,26 @@ Route::prefix('steps')->group(function () {
 	Route::get('/', 'StepsController@index')->name('steps.index');
 
 });
+
+// Question Routes
+Route::prefix('question')->group(function () {
+
+	// Create Page
+	Route::get('/create', 'QuestionsController@create')->name('question.create');
+
+	// Edit (Admin)
+	Route::get('/{id}/edit', 'QuestionsController@edit')->name('question.edit');
+
+	// Destroy
+	Route::delete('/{id}', 'QuestionsController@destroy')->name('question.destroy');
+
+	// Update (Admin)
+	Route::put('/{id}', 'QuestionsController@update')->name('question.update');
+
+	// Store
+	Route::post('/', 'QuestionsController@store')->name('question.store');
+
+	// Index
+	Route::get('/', 'QuestionsController@index')->name('question.index');
+
+});

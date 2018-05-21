@@ -36,7 +36,7 @@ class StepsFormRequest extends FormRequest
             case 'POST':
             {
                 return [
-                    'number' => 'required|unique:steps|integer',
+                    'number' => 'required|unique:steps,number|integer',
                     'description' => 'required'
                 ];
             }

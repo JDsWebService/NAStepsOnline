@@ -78,7 +78,7 @@ class StepsController extends Controller
         Session::flash('success', 'The step has been saved successfully to the database.');
 
         // Return redirect to steps.index
-        return redirect()->route('steps.dashboard');
+        return redirect()->route('steps.index');
     }
 
     /**

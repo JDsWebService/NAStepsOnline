@@ -13,11 +13,11 @@
 			<form action="{{ route('steps.store') }}" method="post">
 				@csrf
 
-				{{-- Title --}}
+				{{-- Step Number --}}
 				{{ Form::label('number', 'Number:') }}
 				{{ Form::selectRange('number', 1, 12, null, ['class' => 'form-control']) }}
 
-				{{-- Just For Today Main Body --}}
+				{{-- Step Description --}}
 				{{ Form::label('description', 'Description:', ['class' => 'top-spacing']) }}
 				{{ Form::textarea('description', null,  ['class' => 'form-control', 'cols' => '30', 'rows' => '10']) }}
 				

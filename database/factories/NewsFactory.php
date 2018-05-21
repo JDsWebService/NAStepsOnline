@@ -4,7 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\News::class, function (Faker $faker) {
 	// Generate Created At and Updated at DATETIME
-	$newsDateTime = $faker->dateTimeThisMonth();
+	$DateTime = $faker->dateTimeThisMonth();
 
 	// Generate Title
 	$title = $faker->catchPhrase;
@@ -21,7 +21,7 @@ $factory->define(App\News::class, function (Faker $faker) {
         'body' => implode(" ", $faker->paragraphs(5)),
         'slug' => $slug,
         'hits' => $faker->numberBetween(1, 1000),
-        'created_at' => $newsDateTime,
-        'updated_at' => $newsDateTime,
+        'created_at' => $DateTime,
+        'updated_at' => $DateTime,
     ];
 });

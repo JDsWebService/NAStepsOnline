@@ -13,7 +13,13 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
 
-        // Use the News Factory to Generate some dummy Posts
-        factory(App\News::class, 50)->create();
+        // Generate Dummy News Articles
+        // factory(App\News::class, 50)->create();
+
+        // Generate Dummy Steps
+        // factory(App\Step::class, 12)->create();
+
+        // Generate Dummy Questions
+        // factory(App\Question::class, 120)->create();
     }
 }
