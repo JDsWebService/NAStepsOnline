@@ -37,20 +37,9 @@
     <div class="row justify-content-center">
 
     	<div class="col-sm-3">
-    		<a href="{{ route('steps.dashboard') }}">
-	    		<div class="card text-center">
-					<img class="card-img-top" src="/images/admin/steps.png" alt="Steps Dashboard">
-					<div class="card-body">
-						<h5 class="card-title">Steps</h5>
-					</div>
-				</div>
-			</a>
-    	</div>
-
-    	<div class="col-sm-3">
     		<a href="#">
 	    		<div class="card text-center">
-					<img class="card-img-top" src="/images/admin/users.png" alt="User Management">
+					<img class="card-img-top" src="/images/icons/users.png" alt="User Management">
 					<div class="card-body">
 						<h5 class="card-title">Users</h5>
 					</div>
@@ -61,7 +50,7 @@
     	<div class="col-sm-3">
     		<a href="{{ route('news.admin.index') }}">
 	    		<div class="card text-center">
-					<img class="card-img-top" src="/images/admin/news.png" alt="News">
+					<img class="card-img-top" src="/images/icons/news.png" alt="News">
 					<div class="card-body">
 						<h5 class="card-title">News</h5>
 					</div>
@@ -72,7 +61,7 @@
     	<div class="col-sm-3">
     		<a href="{{ route('jft.index') }}">
 	    		<div class="card text-center">
-					<img class="card-img-top" src="images/admin/jft.png" alt="Just For Today">
+					<img class="card-img-top" src="images/icons/jft.png" alt="Just For Today">
 					<div class="card-body">
 						<h5 class="card-title">Just For Today</h5>
 					</div>

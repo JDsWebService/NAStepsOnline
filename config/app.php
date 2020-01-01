@@ -153,6 +153,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Mews\Purifier\PurifierServiceProvider::class,
+        Felixkiss\UniqueWithValidator\ServiceProvider::class,
 
         /*
          * Application Service Providers...

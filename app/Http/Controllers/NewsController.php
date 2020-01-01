@@ -3,24 +3,13 @@
 namespace App\Http\Controllers;
 
 use Session;
-use App\News;
-use DB;
+use App\Models\News;
 use Purifier;
 // Request Validation
 use App\Http\Requests\NewsFormRequest;
 
 class NewsController extends Controller
 {
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth:admin')->except(['show', 'index']);
-    }
 
     /**
      * Display an admin listing of the resource.
@@ -46,11 +35,8 @@ class NewsController extends Controller
         // Grab all New Articles from DB
         $news = News::orderBy('created_at', 'desc')->paginate(5);
 
-        // Grab Popular Articles
-        $popular = News::orderby('hits', 'desc')->limit(8)->get();
-
         // Return the Public Index view of the resource
-        return view('news.index')->withNews($news)->withPopular($popular);
+        return view('news.index')->withNews($news);
     }
 
     /**
@@ -111,12 +97,6 @@ class NewsController extends Controller
     {
         // Grab the new article via ID from the Database
         $article = News::where('slug', '=', $slug)->first();
-
-        // Increase the Hit Counter by 1
-        $article->hits += 1;
-
-        // Save the hitcounter
-        $article->save();
 
         // Return the view with the news article
         return view('news.show')->withArticle($article);

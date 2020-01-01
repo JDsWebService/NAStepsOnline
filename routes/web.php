@@ -43,6 +43,13 @@ Route::prefix('users')->group(function () {
 		Route::get('settings', 'UserController@settings')->name('user.settings');
 		Route::post('settings', 'UserController@saveSettings');
 
+		// User Work Routes
+		Route::prefix('work')->middleware('auth')->group(function () {
+
+			// Main Dashboard
+			Route::get('/', 'WorkController@dashboard')->name('work.dashboard');
+
+		});
 });
 
 
@@ -65,6 +72,51 @@ Route::prefix('admin')->group(function() {
 
 	// Admin Dashboard Page
 	Route::get('/', 'AdminController@index')->name('admin.dashboard');
+
+	// Admin News Pages
+	Route::prefix('news')->middleware('auth:admin')->group(function () {
+		// Create (Admin)
+		Route::get('/create', 'NewsController@create')->name('news.create');
+
+		// Store (Admin)
+		Route::post('/', 'NewsController@store')->name('news.store');
+
+		// Edit (Admin)
+		Route::get('/{id}/edit', 'NewsController@edit')->name('news.edit');
+
+		// Update (Admin)
+		Route::put('/{id}', 'NewsController@update')->name('news.update');
+
+		// Destroy (Admin)
+		Route::delete('/{id}', 'NewsController@destroy')->name('news.destroy');
+
+		// Admin Index
+		Route::get('/', 'NewsController@adminIndex')->name('news.admin.index');
+
+	});
+
+	// Just For Today
+	Route::prefix('jft')->middleware('auth:admin')->group(function () {
+		// Create (Admin)
+		Route::get('/create', 'JustForTodayController@create')->name('jft.create');
+
+		// Store (Admin)
+		Route::post('/', 'JustForTodayController@store')->name('jft.store');
+
+		// Edit (Admin)
+		Route::get('/{id}/edit', 'JustForTodayController@edit')->name('jft.edit');
+
+		// Update (Admin)
+		Route::put('/{id}', 'JustForTodayController@update')->name('jft.update');
+
+		// Destroy (Admin)
+		Route::delete('/{id}', 'JustForTodayController@destroy')->name('jft.destroy');
+
+		// Index (Admin)
+		Route::get('/', 'JustForTodayController@index')->name('jft.index');
+	});
+
+
 });
 
 /* Just For Today */
@@ -73,100 +125,15 @@ Route::prefix('jft')->group(function() {
 	// Show (Public)
 	Route::get('/show', 'JustForTodayController@show')->name('jft.show');
 
-	// Create (Admin)
-	Route::get('/create', 'JustForTodayController@create')->name('jft.create');
-
-	// Store (Admin)
-	Route::post('/', 'JustForTodayController@store')->name('jft.store');
-
-	// Edit (Admin)
-	Route::get('/{id}/edit', 'JustForTodayController@edit')->name('jft.edit');
-
-	// Update (Admin)
-	Route::put('/{id}', 'JustForTodayController@update')->name('jft.update');
-
-	// Destroy (Admin)
-	Route::delete('/{id}', 'JustForTodayController@destroy')->name('jft.destroy');
-
-	// Index (Admin)
-	Route::get('/', 'JustForTodayController@index')->name('jft.index');
-
 });
 
 // News Routes
 Route::prefix('news')->group(function() {
 
-	// Create (Admin)
-	Route::get('/create', 'NewsController@create')->name('news.create');
-
-	// Edit (Admin)
-	Route::get('/{id}/edit', 'NewsController@edit')->name('news.edit');
-
-	// Update (Admin)
-	Route::put('/{id}', 'NewsController@update')->name('news.update');
-
-	// Destroy (Admin)
-	Route::delete('/{id}', 'NewsController@destroy')->name('news.destroy');
-
-	// Admin Index
-	Route::get('/admin-index', 'NewsController@adminIndex')->name('news.admin.index');
-
 	// Show (Public)
 	Route::get('/{slug}', 'NewsController@show')->name('news.show');
 
-	// Store (Admin)
-	Route::post('/', 'NewsController@store')->name('news.store');
-
 	// Index (Public)
 	Route::get('/', 'NewsController@publicIndex')->name('news.index');
-
-});
-
-// Steps Routes
-Route::prefix('steps')->group(function () {
-
-	// Steps Dashboard
-	Route::get('/dashboard', 'StepsController@stepsDashboard')->name('steps.dashboard');
-
-	// Create Page
-	Route::get('/create', 'StepsController@create')->name('steps.create');
-
-	// Edit (Admin)
-	Route::get('/{id}/edit', 'StepsController@edit')->name('steps.edit');
-
-	// Destroy
-	Route::delete('/{id}', 'StepsController@destroy')->name('steps.destroy');
-
-	// Update (Admin)
-	Route::put('/{id}', 'StepsController@update')->name('steps.update');
-
-	// Store
-	Route::post('/', 'StepsController@store')->name('steps.store');
-
-	// Index
-	Route::get('/', 'StepsController@index')->name('steps.index');
-
-});
-
-// Question Routes
-Route::prefix('question')->group(function () {
-
-	// Create Page
-	Route::get('/create', 'QuestionsController@create')->name('question.create');
-
-	// Edit (Admin)
-	Route::get('/{id}/edit', 'QuestionsController@edit')->name('question.edit');
-
-	// Destroy
-	Route::delete('/{id}', 'QuestionsController@destroy')->name('question.destroy');
-
-	// Update (Admin)
-	Route::put('/{id}', 'QuestionsController@update')->name('question.update');
-
-	// Store
-	Route::post('/', 'QuestionsController@store')->name('question.store');
-
-	// Index
-	Route::get('/', 'QuestionsController@index')->name('question.index');
 
 });

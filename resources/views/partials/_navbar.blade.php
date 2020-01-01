@@ -31,24 +31,45 @@
         
         <ul class="navbar-nav">
             <!-- Authentication Links -->
-            @guest
-                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+            @guest('user')
+                <li>
+                    <a class="nav-link" href="{{ route('login') }}">
+                        <i class="fas fa-sign-in-alt"></i> {{ __('Login') }}
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{{ route('register') }}">
+                        <i class="fas fa-user-plus"></i> {{ __('Register') }}
+                    </a>
+                </li>
             @else
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->first_name }} <span class="caret"></span>
+                        <img src="/images/users/{{ Auth::guard('user')->user()->profile_picture }}" alt="Your Profile Picture" class="rounded-circle profile-image-navbar"> &nbsp;
+                        {{ Auth::guard('user')->user()->first_name }} <span class="caret"></span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Link</a>
-                        <a class="dropdown-item" href="#">Link</a>
+                        <a class="dropdown-item" href="{{ route('user.dashboard') }}">
+                            <i class="fas fa-user"></i> Your Profile
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="{{ route('work.dashboard') }}">
+                            <i class="fas fa-folder"></i> Your Work
+                        </a>
+
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-book"></i> Resources
+                        </a>
+                        
+                        <div class="dropdown-divider"></div>
+                        
                         <a class="dropdown-item" href="{{ route('user.settings') }}">
                             <i class="fas fa-cog"></i> Edit Settings
                         </a>
 
-                        <div class="dropdown-divider"></div>
-                        
                         <a class="dropdown-item" href="{{ route('user.logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">

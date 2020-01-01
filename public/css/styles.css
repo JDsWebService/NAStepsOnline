@@ -1,6 +1,7 @@
 /* Navigation Bar */
 .navbar {
 	padding: 8px 16px;
+	height: 64.875px;
 }
 
 /* Top Form Spacing */
@@ -11,4 +12,20 @@
 /* Pagination */
 .pagination {
    justify-content: center;
+}
+
+/* Nav Bar Dropdown Item */
+.dropdown-item {
+	font-size: 1.15em;
+}
+
+/* Small Table */
+.table-sm td {
+	padding: .75rem;
+	vertical-align: middle;
+}
+
+/* Nav Bar Profile Image */
+.profile-image-navbar {
+	height: 24px;
 }

@@ -1,6 +1,6 @@
-@extends('layouts.admin')
+@extends('layouts.main')
 
-@section('title', 'Steps Dashboard')
+@section('title', 'Your Work Dashboard')
 
 @section('stylesheets')
 
@@ -11,7 +11,8 @@
 		}
 
 		.card:hover {
-			background-color: #444;
+			background-color: #ccc;
+			color: #333;
 		}
 
 		.card {
@@ -29,29 +30,29 @@
 @section('content')
 
 	<div class="row">
-		<div class="col-sm-12">
-			<h2>Steps Dashboard</h2>
+		<div class="col-sm-6 offset-sm-3">
+			<h2>Your Work</h2>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="col-sm-3 offset-sm-3">
-			<a href="{{ route('steps.index') }}">
+			<a href="#">
 	    		<div class="card text-center">
-					<img class="card-img-top" src="/images/admin/steps.png" alt="Edit Steps">
+					<img class="card-img-top" src="/images/icons/steps.png" alt="Edit Steps">
 					<div class="card-body">
-						<h5 class="card-title">Edit Steps</h5>
+						<h5 class="card-title">Your Steps</h5>
 					</div>
 				</div>
 			</a>
 		</div>
 
 		<div class="col-sm-3">
-			<a href="{{ route('question.index') }}">
+			<a href="#">
 	    		<div class="card text-center">
-					<img class="card-img-top" src="/images/admin/question.png" alt="Edit Step Questions">
+					<img class="card-img-top" src="/images/icons/notes.png" alt="Edit Step Questions">
 					<div class="card-body">
-						<h5 class="card-title">Edit Questions</h5>
+						<h5 class="card-title">Your Notes</h5>
 					</div>
 				</div>
 			</a>	

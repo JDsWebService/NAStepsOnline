@@ -28,7 +28,7 @@
                 <div class="card-body">
 
                     <div class="col-md-12 text-center">
-                        <img src="{{ URL::to('/') }}/images/login_logo.png" alt="Login Logo" class="login-logo">
+                        <img src="/images/icons/login.png" alt="Login Logo" class="login-logo">
                         <p class="lead">User Login</p>
                     </div>
 

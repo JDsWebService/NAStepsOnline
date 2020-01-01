@@ -31,14 +31,6 @@
 			</div>
 		</div>
 
-		<div class="col-sm-4 text-right">
-			<h2><small>Popular Articles</small></h2>
-			<hr>
-			@foreach($popular as $article)
-				<a href="{{ route('news.show', $article->slug) }}">{{ $article->title }}</a>
-				<br>
-			@endforeach
-		</div>
 	</div>
 
 	

@@ -13,8 +13,8 @@
         <div class="container" style="margin-top: 15px;">
             
             {{-- Debug for AUthentication --}}
-            {{-- @component('components.who')
-            @endcomponent --}}
+            @component('components.who')
+            @endcomponent
 
             @include('partials._messages')
 

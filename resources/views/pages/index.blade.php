@@ -38,21 +38,21 @@
 	<div class="row text-center">
 		
 		<div class="col-sm-4">
-			<img src="images/connection.png" alt="text" class="index-icon">
+			<img src="images/icons/connection.png" alt="text" class="index-icon">
 
 			<h4 class="title">Sponsor Connection</h4>
 			<p class="lead">We make connecting and sharing with your sponsor as easy as one click. Email updates can automatically be sent to your sponsor. All settings are configurable and tailored to you!</p>
 		</div>
 		
 		<div class="col-sm-4">
-			<img src="images/lock.png" alt="text" class="index-icon">
+			<img src="images/icons/lock.png" alt="text" class="index-icon">
 
 			<h4 class="title">Secure Encryption</h4>
 			<p class="lead">To make sure anonymity is preserved, we store all step work, notes, and other data with high level encryption at all times. Your information will <strong>never</strong> be shared with anyone <strong>ever</strong>.</p>
 		</div>
 		
 		<div class="col-sm-4">
-			<img src="images/steps.png" alt="text" class="index-icon">
+			<img src="images/icons/steps_home.png" alt="text" class="index-icon">
 
 			<h4 class="title">Comprehensive Steps</h4>
 			<p class="lead">We have a database of comphrensive step working questions to help guide you through the steps. You will also be granted access to a special notes section to write down your thoughts and insights while working on the steps.</p>

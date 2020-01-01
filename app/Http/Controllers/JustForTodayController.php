@@ -4,21 +4,12 @@ namespace App\Http\Controllers;
 
 use Session;
 use Purifier;
-use App\JustForToday;
+use App\Models\JustForToday;
 // Request Validation
 use App\Http\Requests\JFTFormRequest;
 
 class JustForTodayController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth:admin')->except('show');
-    }
 
     /**
      * Display a listing of the resource.

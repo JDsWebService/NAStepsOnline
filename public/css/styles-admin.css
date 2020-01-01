@@ -8,6 +8,11 @@
 	margin-top: 15px;
 }
 
+/* Bottom Spacing */
+.bottom-spacing {
+	margin-bottom: 15px;
+}
+
 /* Horizontal Rule */
 hr {
 	background-color: #aaa;
@@ -16,4 +21,10 @@ hr {
 /* Pagination */
 .pagination {
    justify-content: center;
+}
+
+/* Small Table */
+.table-sm td {
+	padding: .75rem;
+	vertical-align: middle;
 }

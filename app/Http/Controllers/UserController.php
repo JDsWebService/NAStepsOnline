@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-use App\User;
+use App\Models\User;
 use Image;
 use Session;
 use File;
@@ -29,7 +29,7 @@ class UserController extends Controller
     public function index()
     {
         // Grab the user data and put it into an easily accessible variable
-        $user = Auth::user();
+        $user = Auth::guard('user')->user();
         // Return view with user data
         return view('user.dashboard')->withUser($user);
     }
@@ -48,7 +48,7 @@ class UserController extends Controller
         ]);
 
         // Grab the user from the DB
-        $user = User::find(Auth::user()->id);
+        $user = User::find(Auth::guard('user')->user()->id);
 
         // Put request into the user object
 

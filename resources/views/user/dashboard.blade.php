@@ -83,6 +83,151 @@
             <hr style="margin: 3.5vh 0;">
 
             <h1>Completed Steps</h1>
+            
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">One</p>
+                </div>
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Two</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Three</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Four</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Five</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Six</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Seven</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Eight</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Nine</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Ten</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Eleven</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <p class="lead">Tweleve</p>       
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 

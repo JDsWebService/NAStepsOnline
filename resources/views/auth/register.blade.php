@@ -23,7 +23,7 @@
                 <div class="card-body">
 
                     <div class="col-md-12 text-center">
-                        <img src="{{ URL::to('/') }}/images/add_user.png" alt="Add User Logo" class="add-user-logo">
+                        <img src="/images/icons/add_user.png" alt="Add User Logo" class="add-user-logo">
                         <p class="lead">User Registration</p>
                     </div>
 
