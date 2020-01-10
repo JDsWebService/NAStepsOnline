@@ -16,6 +16,8 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
+// Route::get('/regex', 'RegexController@parseStepQuestions');
+
 // User Routes
 Route::prefix('users')->group(function () {
 		
@@ -46,7 +48,94 @@ Route::prefix('users')->group(function () {
 		// User Work Routes
 		Route::prefix('work')->middleware('auth')->group(function () {
 
-			// Main Dashboard
+			// Steps
+			Route::prefix('st')->group(function () {
+
+				// Step One
+				Route::prefix('1')->group(function () {
+					// Step One Sections
+					Route::prefix('s')->group(function () {
+						// Step 1 2.txt
+						Route::get('1', 'StepsController@stepOneSectionOne')->name('step.one.section.one');
+						// Step 1 3.txt
+						Route::get('2', 'StepsController@stepOneSectionTwo')->name('step.one.section.two');
+						// Step 1 4.txt
+						Route::get('3', 'StepsController@stepOneSectionThree')->name('step.one.section.three');
+						// Step 1 5.txt
+						Route::get('4', 'StepsController@stepOneSectionFour')->name('step.one.section.four');
+						// Step 1 6.txt
+						Route::get('5', 'StepsController@stepOneSectionFive')->name('step.one.section.five');
+						// Step 1 7.txt
+						Route::get('6', 'StepsController@stepOneSectionSix')->name('step.one.section.six');
+						// Step 1 8.txt
+						Route::get('7', 'StepsController@stepOneSectionSeven')->name('step.one.section.seven');
+						// Step 1 9.txt
+						Route::get('8', 'StepsController@stepOneSectionEight')->name('step.one.section.eight');
+						// Step 1 10.txt
+						Route::get('9', 'StepsController@stepOneSectionNine')->name('step.one.section.nine');
+					});
+					// Step 1 1.txt
+					Route::get('opening', 'StepsController@stepOneOpening')->name('step.one.opening');
+					// Step One Index
+					Route::get('/', 'StepsController@stepOneIndex')->name('step.one.index');
+				});
+
+				// Step Two
+				Route::prefix('2')->group(function () {
+					// Step Two Sections
+					Route::prefix('s')->group(function () {
+						// Step 2 2.txt
+						Route::get('1', 'StepsController@stepTwoSectionOne')->name('step.two.section.one');
+						// Step 2 3.txt
+						Route::get('2', 'StepsController@stepTwoSectionTwo')->name('step.two.section.two');
+						// Step 2 4.txt
+						Route::get('3', 'StepsController@stepTwoSectionThree')->name('step.two.section.three');
+						// Step 2 5.txt
+						Route::get('4', 'StepsController@stepTwoSectionFour')->name('step.two.section.four');
+						// Step 2 6.txt
+						Route::get('5', 'StepsController@stepTwoSectionFive')->name('step.two.section.five');
+						// Step 2 7.txt
+						Route::get('6', 'StepsController@stepTwoSectionSix')->name('step.two.section.six');
+						// Step 2 8.txt
+						Route::get('7', 'StepsController@stepTwoSectionSeven')->name('step.two.section.seven');
+					});
+					// Step 2 1.txt
+					Route::get('opening', 'StepsController@stepTwoOpening')->name('step.two.opening');
+					// Step Two Index
+					Route::get('/', 'StepsController@stepTwoIndex')->name('step.two.index');
+				});
+
+				// Step Three
+				Route::prefix('3')->group(function () {
+					// Step Three Sections
+					Route::prefix('s')->group(function () {
+						// Step 3 2.txt
+						Route::get('1', 'StepsController@stepThreeSectionOne')->name('step.three.section.one');
+						// Step 3 3.txt
+						Route::get('2', 'StepsController@stepThreeSectionTwo')->name('step.three.section.two');
+						// Step 3 4.txt
+						Route::get('3', 'StepsController@stepThreeSectionThree')->name('step.three.section.three');
+						// Step 3 5.txt
+						Route::get('4', 'StepsController@stepThreeSectionFour')->name('step.three.section.four');
+						// Step 3 6.txt
+						Route::get('5', 'StepsController@stepThreeSectionFive')->name('step.three.section.five');
+						// Step 3 7.txt
+						Route::get('6', 'StepsController@stepThreeSectionSix')->name('step.three.section.six');
+					});
+					// Step 3 1.txt
+					Route::get('opening', 'StepsController@stepThreeOpening')->name('step.three.opening');
+					// Step Three Index
+					Route::get('/', 'StepsController@stepThreeIndex')->name('step.three.index');
+				});
+
+				// Step Working Guide Preface
+				Route::get('/preface', 'StepsController@preface')->name('steps.preface');
+
+				// Step Work Dashboard
+				Route::get('/', 'StepsController@dashboard')->name('steps.dashboard');
+			});
+
+			// Main Work Dashboard
 			Route::get('/', 'WorkController@dashboard')->name('work.dashboard');
 
 		});

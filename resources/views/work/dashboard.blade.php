@@ -37,7 +37,7 @@
 
 	<div class="row">
 		<div class="col-sm-3 offset-sm-3">
-			<a href="#">
+			<a href="{{ route('steps.dashboard') }}">
 	    		<div class="card text-center">
 					<img class="card-img-top" src="/images/icons/steps.png" alt="Edit Steps">
 					<div class="card-body">
