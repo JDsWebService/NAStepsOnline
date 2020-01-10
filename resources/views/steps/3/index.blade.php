@@ -1,6 +1,6 @@
 @extends('layouts.stepsection')
 
-@section('title', 'Step Two - Table of Contents')
+@section('title', 'Step Three - Table of Contents')
 
 @section('stylesheets')
 
@@ -15,7 +15,7 @@
 @section('content')
 	
 	<div class="row justify-content-center">
-		{{-- Step 2 1 --}}
+		{{-- Step 3 1 --}}
 		<div class="col-sm-3 mb-2">
 			<div class="card">
 				<div class="card-body">
@@ -31,7 +31,7 @@
 
 	<div class="row justify-content-center">
 	
-		{{-- Step 2 2 --}}
+		{{-- Step 3 2 --}}
 		<div class="col-sm-3 mb-2">
 			<div class="card section-card">
 				<div class="card-body d-flex flex-column">
@@ -47,7 +47,7 @@
 			</div>
 		</div>
 
-		{{-- Step 2 3 --}}
+		{{-- Step 3 3 --}}
 		<div class="col-sm-3 mb-2">
 			<div class="card section-card">
 				<div class="card-body d-flex flex-column">
@@ -63,7 +63,7 @@
 			</div>
 		</div>
 
-		{{-- Step 2 4 --}}
+		{{-- Step 3 4 --}}
 		<div class="col-sm-3 mb-2">
 			<div class="card section-card">
 				<div class="card-body d-flex flex-column">
@@ -79,7 +79,7 @@
 			</div>
 		</div>
 
-		{{-- Step 2 5 --}}
+		{{-- Step 3 5 --}}
 		<div class="col-sm-3 mb-2">
 			<div class="card section-card">
 				<div class="card-body d-flex flex-column">
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 
-		{{-- Step 2 6 --}}
+		{{-- Step 3 6 --}}
 		<div class="col-sm-3 mb-2">
 			<div class="card section-card">
 				<div class="card-body d-flex flex-column">
@@ -111,7 +111,7 @@
 			</div>
 		</div>
 
-		{{-- Step 2 7 --}}
+		{{-- Step 3 7 --}}
 		<div class="col-sm-3 mb-2">
 			<div class="card section-card">
 				<div class="card-body d-flex flex-column">
